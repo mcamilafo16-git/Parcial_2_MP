@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apper - Mobile App Landing Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#0b1120',
+                        },
+                        accent: {
+                            400: '#00f2fe',
+                            500: '#00d2ff',
+                            600: '#0284c7',
+                        }
+                    },
+                    maxWidth: {
+                        'bootstrap': '1170px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .cyan-glow {
+            box-shadow: 0 10px 30px -5px rgba(0, 242, 254, 0.4);
+        }
+        .bg-pattern-dots {
+            background-image: radial-gradient(#0284c7 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-white antialiased selection:bg-accent-400 selection:text-navy-900">
+
+    <!-- HEADER -->
+    <header class="bg-navy-900 text-white sticky top-0 z-50 border-b border-navy-800">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center gap-2 font-bold text-2xl tracking-tight text-white">
+                    <span class="text-accent-400">apper</span><span class="w-2 h-2 rounded-full bg-accent-400 inline-block"></span>
+                </a>
+
+                <!-- Nav Links - Desktop -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-300">
+                    <a href="#home" class="hover:text-accent-400 transition-colors">Home</a>
+                    <a href="#features" class="hover:text-accent-400 transition-colors">Features</a>
+                    <a href="#about" class="hover:text-accent-400 transition-colors">About</a>
+                    <a href="#pricing" class="hover:text-accent-400 transition-colors">Pricing</a>
+                    <a href="#contact" class="hover:text-accent-400 transition-colors">Contact</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center gap-4">
+                    <a href="#download" class="bg-accent-400 hover:bg-accent-500 text-navy-900 font-semibold text-xs uppercase tracking-wider px-6 py-2.5 rounded-full transition-all cyan-glow">
+                        Get App
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button id="menu-btn" class="md:hidden text-gray-300 hover:text-white p-2" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800 border-b border-navy-700 px-4 py-4 space-y-3">
+            <a href="#home" class="block text-gray-200 hover:text-accent-400 font-medium py-1">Home</a>
+            <a href="#features" class="block text-gray-200 hover:text-accent-400 font-medium py-1">Features</a>
+            <a href="#about" class="block text-gray-200 hover:text-accent-400 font-medium py-1">About</a>
+            <a href="#pricing" class="block text-gray-200 hover:text-accent-400 font-medium py-1">Pricing</a>
+            <a href="#contact" class="block text-gray-200 hover:text-accent-400 font-medium py-1">Contact</a>
+            <a href="#download" class="block text-center bg-accent-400 text-navy-900 font-semibold text-xs uppercase py-2.5 rounded-full mt-2">Get App</a>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="bg-navy-900 text-white relative pt-16 pb-24 lg:pt-24 lg:pb-36 overflow-hidden">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Text Left -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <h1 class="text-3xl sm:text-5xl font-light tracking-tight leading-tight">
+                        Choose a better way to <br class="hidden sm:inline"/>
+                        <span class="font-normal">represent your app</span>
+                    </h1>
+                    <p class="text-gray-400 text-sm sm:text-base max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
+                        A modern, minimal and powerful landing page structure designed specifically for mobile applications and SaaS solutions. Built using the Bootstrap 1170px grid.
+                    </p>
+                    <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#download" class="bg-accent-400 hover:bg-accent-500 text-navy-900 font-semibold text-xs uppercase tracking-wider px-8 py-3.5 rounded-full transition-all cyan-glow">
+                            Primary Action
+                        </a>
+                        <a href="#about" class="border border-gray-600 hover:border-gray-400 text-gray-300 font-medium text-xs uppercase tracking-wider px-8 py-3.5 rounded-full transition-colors">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Phone Mockup Right -->
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-64 sm:w-72 h-[480px] bg-accent-400 rounded-[40px] p-3 border-4 border-navy-800 shadow-2xl flex flex-col justify-between items-center transform lg:translate-y-12">
+                        <!-- Screen Notch -->
+                        <div class="w-32 h-5 bg-navy-900 rounded-b-xl"></div>
+                        <div class="text-navy-900 font-bold text-lg text-center my-auto">
+                            <i class="fa-solid fa-mobile-screen text-5xl mb-3 block"></i>
+                            App Showcase
+                        </div>
+                        <div class="w-12 h-1 bg-navy-900/40 rounded-full mb-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES GRID SECTION -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+                <h2 class="text-2xl sm:text-3xl font-light text-gray-900">
+                    Everything needed to power <br/><span class="font-bold">your app brand online</span>
+                </h2>
+                <div class="w-12 h-0.5 bg-accent-400 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="p-8 border border-gray-100 rounded-xl text-center shadow-xs hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-lg border border-accent-400 text-accent-400 flex items-center justify-center text-xl mx-auto mb-6">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-3">Modern Design</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Clean aesthetic layout crafted according to modern mobile user interface trends.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="p-8 border border-gray-100 rounded-xl text-center shadow-xs hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-lg border border-accent-400 text-accent-400 flex items-center justify-center text-xl mx-auto mb-6">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-3">Fast Setup</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Quick modular sections easy to adapt for any application product showcase.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="p-8 border border-gray-100 rounded-xl text-center shadow-xs hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-lg border border-accent-400 text-accent-400 flex items-center justify-center text-xl mx-auto mb-6">
+                        <i class="fa-solid fa-desktop"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-3">Fully Responsive</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Flawless behavior on desktops, tablets, and smartphones out of the box.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="p-8 border border-gray-100 rounded-xl text-center shadow-xs hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 rounded-lg border border-accent-400 text-accent-400 flex items-center justify-center text-xl mx-auto mb-6">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h3 class="text-sm font-semibold uppercase tracking-wider text-gray-900 mb-3">Retina Ready</h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">Crisp SVG icons and vector-ready design elements for high-DPI displays.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE 1: DARK / LIGHT SPLIT -->
+    <section class="bg-gray-50 border-y border-gray-100">
+        <div class="max-w-bootstrap mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+                <div class="bg-navy-900 text-white p-12 lg:p-20 min-h-[320px] flex items-center justify-center">
+                    <div class="text-center space-y-4">
+                        <i class="fa-solid fa-layer-group text-5xl text-accent-400"></i>
+                        <p class="text-xs uppercase tracking-widest text-gray-400">Modular Architecture</p>
+                    </div>
+                </div>
+                <div class="p-10 lg:p-16 space-y-4">
+                    <h3 class="text-2xl font-light text-gray-900">Get More From Your <br/><span class="font-bold">Smartphone</span></h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        Streamline your user interface with balanced white space, accessible color contrast, and concise messaging tailored to drive conversions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE 2: STABLE AND READY -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <h3 class="text-2xl font-light text-gray-900">Stable And <span class="font-bold">Ready</span></h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        Built on top of tested layout patterns with 100% responsive grid alignment. Easy to customize for software, mobile apps, and tech startups.
+                    </p>
+                    <a href="#" class="inline-block bg-accent-400 hover:bg-accent-500 text-navy-900 font-semibold text-xs uppercase tracking-wider px-8 py-3 rounded-md transition-all">
+                        Download Now
+                    </a>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="bg-navy-900 text-white p-8 rounded-2xl shadow-xl space-y-4 max-w-lg mx-auto">
+                        <div class="flex items-center gap-2 border-b border-navy-800 pb-4">
+                            <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                            <span class="text-xs text-gray-400 ml-2">app-dashboard-preview</span>
+                        </div>
+                        <div class="space-y-2 text-xs text-gray-300 font-mono">
+                            <p class="text-accent-400">&gt; Status: Online and ready</p>
+                            <p>&gt; Version 2.4.0 deployed</p>
+                            <p>&gt; All modules operating normally</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE 3: INTERACTIVE TABBED LIST -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Isometric Phone Mockup -->
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="w-64 h-[380px] bg-white rounded-3xl p-4 shadow-2xl border border-gray-200 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
+                        <div class="h-full border border-gray-100 rounded-2xl p-4 space-y-4 bg-slate-50">
+                            <div class="h-24 bg-navy-900 rounded-xl flex items-center justify-center text-accent-400 font-bold text-xs">
+                                App Header
+                            </div>
+                            <div class="space-y-2">
+                                <div class="h-4 bg-gray-200 rounded-md w-3/4"></div>
+                                <div class="h-4 bg-gray-200 rounded-md w-1/2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab List Right -->
+                <div class="lg:col-span-6 space-y-3">
+                    <div class="p-4 rounded-xl bg-white border border-gray-200 shadow-2xs hover:border-accent-400 cursor-pointer transition-colors flex items-center gap-4">
+                        <i class="fa-solid fa-heart text-accent-400 text-lg"></i>
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase">User Friendly</h4>
+                            <p class="text-[11px] text-gray-500">Intuitive interface designed for maximum retention.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-accent-400 text-navy-900 shadow-md flex items-center gap-4">
+                        <i class="fa-solid fa-bolt text-navy-900 text-lg"></i>
+                        <div>
+                            <h4 class="text-xs font-bold uppercase">High Performance</h4>
+                            <p class="text-[11px] text-navy-900/80">Optimized loading speeds for smooth experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white border border-gray-200 shadow-2xs hover:border-accent-400 cursor-pointer transition-colors flex items-center gap-4">
+                        <i class="fa-solid fa-shield-halved text-accent-400 text-lg"></i>
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase">Secure Data</h4>
+                            <p class="text-[11px] text-gray-500">Enterprise grade encryption built into the platform.</p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 rounded-xl bg-white border border-gray-200 shadow-2xs hover:border-accent-400 cursor-pointer transition-colors flex items-center gap-4">
+                        <i class="fa-solid fa-gear text-accent-400 text-lg"></i>
+                        <div>
+                            <h4 class="text-xs font-bold text-gray-900 uppercase">Easy Settings</h4>
+                            <p class="text-[11px] text-gray-500">Full control over notifications and preferences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SHOWCASE 4: EVERYTHING YOU NEED -->
+    <section class="py-20 bg-white">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <h3 class="text-2xl font-light text-gray-900">Everything <span class="font-bold">You Need</span></h3>
+                    <ul class="space-y-3 text-xs text-gray-600">
+                        <li class="flex items-center gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-accent-400"></span> Fast and lightweight layout
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-accent-400"></span> Fully responsive Bootstrap 1170px grid structure
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-2.5 h-2.5 rounded-full bg-accent-400"></span> Modern typography and icon set
+                        </li>
+                    </ul>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        Designed to highlight key product advantages clearly while maintaining visual focus on call-to-action elements.
+                    </p>
+                </div>
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="w-72 h-80 bg-navy-900 rounded-t-3xl p-6 shadow-2xl text-white relative">
+                        <div class="w-full h-full bg-navy-800 rounded-t-xl border border-navy-700 p-4">
+                            <p class="text-xs text-accent-400 font-mono">App Preview Mode</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEO PROMO BANNER -->
+    <section class="py-20 bg-navy-900 text-white text-center">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+            <button id="play-video-btn" class="w-16 h-16 rounded-full bg-accent-400 text-navy-900 flex items-center justify-center text-xl mx-auto shadow-lg hover:scale-110 transition-transform cyan-glow" aria-label="Play Promo Video">
+                <i class="fa-solid fa-play ml-1"></i>
+            </button>
+            <h3 class="text-xs font-semibold uppercase tracking-widest text-gray-300">Watch The Video</h3>
+            <p class="text-xs text-gray-400 max-w-xl mx-auto leading-relaxed">
+                Take a quick tour of our application features and discover how simple it is to get started today.
+            </p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS / MAP STATS -->
+    <section class="py-20 bg-white bg-pattern-dots">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+            <h3 class="text-2xl font-light text-gray-900">Join <span class="font-bold">The Thousands</span> of satisfied users</h3>
+            <p class="text-xs text-gray-500 max-w-md mx-auto">Trusted by thousands of companies and individual creators worldwide.</p>
+            <a href="#download" class="inline-block bg-accent-400 hover:bg-accent-500 text-navy-900 font-semibold text-xs uppercase tracking-wider px-8 py-3 rounded-full cyan-glow">
+                Get Started
+            </a>
+        </div>
+    </section>
+
+    <!-- DARK BANNER QUOTE -->
+    <section class="py-12 bg-navy-950 text-white text-center border-y border-navy-800">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-xs sm:text-sm text-accent-400 font-light max-w-3xl mx-auto italic leading-relaxed">
+                "Simple, elegant, and effective layout structure engineered for maximum readability and conversion rate."
+            </p>
+        </div>
+    </section>
+
+    <!-- NOW AVAILABLE / DOWNLOAD SECTION -->
+    <section id="download" class="py-20 bg-gray-50">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <!-- Dual Phone Mockup -->
+                <div class="lg:col-span-6 flex justify-center items-end gap-4">
+                    <div class="w-48 h-80 bg-accent-400 rounded-t-3xl p-2 border-t-4 border-navy-900 shadow-xl"></div>
+                    <div class="w-36 h-64 bg-accent-400 rounded-t-2xl p-2 border-t-4 border-navy-900 shadow-lg"></div>
+                </div>
+
+                <!-- Content Right -->
+                <div class="lg:col-span-6 space-y-6">
+                    <h3 class="text-2xl font-light text-gray-900">Now <span class="font-bold">Available</span></h3>
+                    <p class="text-xs text-gray-500 leading-relaxed">
+                        Download the application today on iOS and Android platforms to unlock full access to all features.
+                    </p>
+
+                    <!-- App Store Badges -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="#" class="bg-navy-900 hover:bg-navy-800 text-white px-5 py-2.5 rounded-lg flex items-center gap-3 shadow-md">
+                            <i class="fa-brands fa-google-play text-xl"></i>
+                            <div class="text-left">
+                                <p class="text-[9px] uppercase tracking-wider text-gray-400">Get it on</p>
+                                <p class="text-xs font-bold">Google Play</p>
+                            </div>
+                        </a>
+                        <a href="#" class="bg-navy-900 hover:bg-navy-800 text-white px-5 py-2.5 rounded-lg flex items-center gap-3 shadow-md">
+                            <i class="fa-brands fa-apple text-2xl"></i>
+                            <div class="text-left">
+                                <p class="text-[9px] uppercase tracking-wider text-gray-400">Download on</p>
+                                <p class="text-xs font-bold">App Store</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Big Cyan Action Strip -->
+            <div class="mt-16 text-center">
+                <a href="#contact" class="inline-block bg-accent-400 hover:bg-accent-500 text-navy-900 font-bold text-xs uppercase tracking-widest px-12 py-3.5 rounded-md cyan-glow transition-all">
+                    Get In Touch Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <footer id="contact" class="bg-white pt-16 pb-8 border-t border-gray-200">
+        <div class="max-w-bootstrap mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+            <!-- 5 Columns Links -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-xs">
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider text-gray-900 mb-4">Services</h5>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-accent-600">Design</a></li>
+                        <li><a href="#" class="hover:text-accent-600">Development</a></li>
+                        <li><a href="#" class="hover:text-accent-600">Hosting</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider text-gray-900 mb-4">Support</h5>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-accent-600">Documentation</a></li>
+                        <li><a href="#" class="hover:text-accent-600">FAQs</a></li>
+                        <li><a href="#" class="hover:text-accent-600">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider text-gray-900 mb-4">Company</h5>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-accent-600">About Us</a></li>
+                        <li><a href="#" class="hover:text-accent-600">Careers</a></li>
+                        <li><a href="#" class="hover:text-accent-600">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold uppercase tracking-wider text-gray-900 mb-4">Resources</h5>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-accent-600">Community</a></li>
+                        <li><a href="#" class="hover:text-accent-600">Guides</a></li>
+                        <li><a href="#" class="hover:text-accent-600">Tools</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-2 md:col-span-1">
+                    <h5 class="font-bold uppercase tracking-wider text-gray-900 mb-4">Legal</h5>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-accent-600">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-accent-600">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Get in Touch Form -->
+            <div class="text-center max-w-xl mx-auto space-y-4 pt-6 border-t border-gray-100">
+                <h4 class="text-sm font-bold uppercase tracking-wider text-gray-900">Get In Touch</h4>
+                <p class="text-xs text-gray-500">Subscribe to our newsletter to receive news and updates.</p>
+                <form id="subscribe-form" class="flex flex-col sm:flex-row gap-2 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" required class="flex-grow px-4 py-2.5 rounded-md border border-gray-300 text-xs focus:outline-none focus:border-accent-400">
+                    <button type="submit" class="bg-accent-400 hover:bg-accent-500 text-navy-900 font-semibold text-xs uppercase px-6 py-2.5 rounded-md transition-all">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+
+            <!-- Bottom Footer Bar -->
+            <div class="bg-navy-900 text-gray-400 py-4 px-6 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+                <p>&copy; 2026 Apper. All rights reserved. 1170px Bootstrap Grid.</p>
+                <div class="flex items-center space-x-4">
+                    <a href="#" class="hover:text-accent-400" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-accent-400" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="hover:text-accent-400" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+                    <a href="#" class="hover:text-accent-400" aria-label="Github"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="hover:text-accent-400" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Video Modal -->
+    <div id="video-modal" class="fixed inset-0 bg-black/80 z-50 hidden items-center justify-center p-4">
+        <div class="relative w-full max-w-2xl bg-navy-900 rounded-2xl p-6 text-white space-y-4">
+            <div class="flex justify-between items-center border-b border-navy-800 pb-3">
+                <h4 class="text-sm font-bold">Apper Promo Video</h4>
+                <button id="close-video-btn" class="text-gray-400 hover:text-white text-lg"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="aspect-video bg-navy-950 rounded-xl flex items-center justify-center">
+                <i class="fa-solid fa-circle-play text-5xl text-accent-400 animate-pulse"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const menuBtn = document.getElementById('menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-xmark');
+            });
+
+            // Video modal
+            const playBtn = document.getElementById('play-video-btn');
+            const closeBtn = document.getElementById('close-video-btn');
+            const videoModal = document.getElementById('video-modal');
+
+            playBtn.addEventListener('click', () => {
+                videoModal.classList.remove('hidden');
+                videoModal.classList.add('flex');
+            });
+
+            const closeModal = () => {
+                videoModal.classList.add('hidden');
+                videoModal.classList.remove('flex');
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+            videoModal.addEventListener('click', (e) => {
+                if (e.target === videoModal) closeModal();
+            });
+
+            // Subscription form toast alert
+            const form = document.getElementById('subscribe-form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for subscribing!');
+                form.reset();
+            });
+        });
+    </script>
+</body>
+</html>
